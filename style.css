@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Nunito", sans-serif;
+}
+html {
+  background-color: black;
+}
+
+.navbar {
+  padding: 0.8rem;
+  background-color: #264653;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+  font-weight: bold;
+}
+.nav-link {
+  font-size: 1.5em !important;
+}
+
+.navbar-brand {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 2.5rem;
+}
+
+.carousel-inner img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  text-shadow: 10px 10px 15px black;
+  height: fit-content;
+  width: fit-content;
+}
+
+.carousel-caption h1 {
+  font-weight: 900;
+}
+
+.carousel-caption h2 {
+  font-weight: 700;
+}
+/* text-animation start */
+
+.carousel-caption {
+  width: 36ch;
+  animation: typing 2s steps(15), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* text animation end */
+
+#about {
+  scroll-margin-top: 60px;
+  background-color: #2a9d8f;
+}
+#about h3 {
+  font-family: "Aclonica", sans-serif;
+  font-size: 5rem;
+  text-decoration: underline;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.lead {
+  font-size: 1.5rem;
+}
+
+#about img {
+  object-fit: cover;
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+figure span {
+  font-size: 30px;
+  margin-left: 50%;
+  font-style: italic;
+}
+
+#projects {
+  scroll-margin-top: 60px;
+  /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
+  background-color: #e76f51;
+}
+
+#projects h3 {
+  font-family: "Aclonica", sans-serif;
+  font-size: 5rem;
+  text-decoration: underline;
+}
+
+.projects_card {
+  width: 28rem;
+  height: 40rem;
+  position: relative;
+}
+
+.projects_card-front,
+.projects_card-back {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+  backface-visibility: hidden;
+  transform: perspective(100rem);
+
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  /* padding: 3rem; */
+}
+
+.projects_card-front h2 {
+  background-color: var(--color-secondary-m-light);
+  padding: 1rem;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.projects_card-back p {
+  place-self: center;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.projects_card:first-child .projects_card-front {
+  background-image: url("/images/project1.jpg");
+}
+
+.projects_card:nth-of-type(2) .projects_card-front {
+  background-image: url("/images/project2.JPG");
+}
+
+.projects_card:last-child .projects_card-front {
+  background-image: url("/images/project3.JPG");
+}
+.projects_card-back {
+  transform: perspective(100rem) rotateY(0.5turn);
+  background-color: #264653;
+}
+
+.projects_card:hover .projects_card-front {
+  transform: perspective(100rem) rotateY(0.5turn);
+}
+
+.projects_card:hover .projects_card-back {
+  transform: perspective(100rem) rotateY(1turn);
+}
+
+#contact {
+  scroll-margin-top: 70px;
+  background-color: #f4a261;
+}
+
+#contact h3 {
+  font-family: "Aclonica", sans-serif;
+  font-size: 5rem;
+  text-decoration: underline;
+}
+
+#contact .form {
+  background-color: #264653;
+}
+
+.bg-primary {
+  height: fit-content;
+}
+
+.social {
+  font-size: 30px;
+}
+
+.nav-item a:hover {
+  font-size: 1.7rem !important;
+  font-weight: 900 !important;
+}
+
+#footer {
+  background-color: rgb(26, 30, 47) !important;
+}
+
+.footer_social_link:link,
+.footer_social_link:visited {
+  transform: scale(0.8);
+  animation: social 3s linear infinite;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.footer_social_link i {
+  font-size: 2rem;
+}
+.footer_social_link i:hover,
+.footer_social_link i:active {
+  color: blue;
+}
+
+@keyframes social {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.address_btn {
+  background-color: transparent;
+  border: transparent;
+  font-weight: normal;
+}
+
+.address_btn:hover {
+  background-color: transparent;
+  border: transparent;
+}
+
+.navbar-toggler {
+  background-image: linear-gradient(109.6deg, rgba(61, 245, 167, 1) 11.2%, rgba(9, 111, 224, 1) 91.1%);
+  opacity: 0.8;
+  margin-right: 0.5em;
+  color: white !important;
+}
+
+/* media query */
+
+@media screen and (max-width: 576px) {
+  .navbar-brand {
+    font-size: 2rem;
+  }
+
+  #about h3 {
+    font-size: 3.5rem;
+  }
+
+  #about h2 {
+    font-size: 2rem;
+  }
+
+  #projects h3 {
+    font-size: 3rem;
+  }
+
+  #contact h3 {
+    font-size: 3rem;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel-caption {
+    animation: typing 3s steps(22), blink 1s step-end infinite alternate;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.2rem;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+  .projects_card-front,
+  .projects_card-back {
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .projects_card-front,
+  .projects_card-back {
+    height: 80%;
+  }
+}
